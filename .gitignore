@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# Node
+node_modules/
+*.log
+*.lock
+
+# Docker
+*.env
+.env.*
+.docker/
+docker-compose.override.yml
+
+# VSCode / IDEs
+.vscode/
+.idea/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+terraform.tfvars
+
+# OS
+.DS_Store
+Thumbs.db
