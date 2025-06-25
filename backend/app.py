@@ -12,6 +12,7 @@ http_requests = Counter(
     ["method", "endpoint"]         # Label names
 )
 
+
 @app.route("/submit", methods=["POST"])
 def submit():
     http_requests.labels(method="POST", endpoint="/submit").inc()
