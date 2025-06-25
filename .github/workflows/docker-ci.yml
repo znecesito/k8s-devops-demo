@@ -33,7 +33,7 @@ jobs:
 
       - name: Run backend tests (pytest)
         run: |
-          pytest backend/tests
+          PYTHONPATH=backend pytest backend/tests
 
       # 🔽 Docker login and build after tests pass
       - name: Log in to Docker Hub
