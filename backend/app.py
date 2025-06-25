@@ -6,8 +6,11 @@ import os
 app = Flask(__name__)
 
 # Prometheus metrics
-http_requests = Counter("http_requests_total", "Total HTTP Requests", ["method", "endpoint"])
-
+http_requests = Counter(
+    "http_requests_total",         # Metric name
+    "Total HTTP Requests",         # Description
+    ["method", "endpoint"]         # Label names
+)
 
 @app.route("/submit", methods=["POST"])
 def submit():
