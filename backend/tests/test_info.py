@@ -1,6 +1,7 @@
 import json
 from app import app
 
+
 def test_info_endpoint():
     with app.test_client() as client:
         response = client.get('/info')
