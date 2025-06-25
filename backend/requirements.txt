@@ -1,2 +1,4 @@
 Flask
+pytest
+flake8
 prometheus_client

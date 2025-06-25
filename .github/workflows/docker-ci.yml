@@ -17,6 +17,25 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # ✅ Add test/lint block here
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install backend test dependencies
+        run: |
+          pip install -r backend/requirements.txt
+
+      - name: Run backend linter (flake8)
+        run: |
+          flake8 backend
+
+      - name: Run backend tests (pytest)
+        run: |
+          pytest backend/tests
+
+      # 🔽 Docker login and build after tests pass
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
